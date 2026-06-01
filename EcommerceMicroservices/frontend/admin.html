@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <div class="hero">
+
+        <h1>Admin Product Management</h1>
+
+        <p>
+            Manage Products • Inventory • Stock
+        </p>
+
+    </div>
+
+    <nav class="navbar">
+
+        <button onclick="showSection('addSection')">
+            Add Product
+        </button>
+
+        <button onclick="showSection('productsSection')">
+            Products
+        </button>
+
+        <button onclick="showSection('ordersSection')">
+            Customer Orders
+        </button>
+
+        <button
+            onclick="logout()"
+            class="logout-btn"
+        >
+            Logout
+        </button>
+
+    </nav>
+
+    <div class="container">
+
+        <!-- DASHBOARD -->
+
+        <div class="container">
+
+        <!-- DASHBOARD -->
+
+        <div class="dashboard">
+
+            <div class="card">
+
+                <h3>Total Products</h3>
+
+                <p id="totalProducts">0</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Total Revenue</h3>
+
+                <p id="totalRevenue">₹0</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Low Stock Items</h3>
+
+                <p id="lowStockCount">0</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Out Of Stock</h3>
+
+                <p id="outStockCount">0</p>
+
+            </div>
+            
+        </div>
+        <div class="dashboard">
+
+    <div class="card" onclick="showAllOrders()">
+    <h3>Total Orders</h3>
+    <p id="totalOrders">0</p>
+</div>
+
+<div class="card" onclick="showActiveOrders()">
+    <h3>Active Orders</h3>
+    <p id="activeOrders">0</p>
+</div>
+
+<div class="card" onclick="showCancelledOrders()">
+    <h3>Cancelled Orders</h3>
+    <p id="cancelledOrders">0</p>
+</div>
+
+</div>
+
+        <!-- ADD PRODUCT SECTION -->
+
+        <div id="addSection">
+
+            <h2>Add Product</h2>
+
+            <div class="form-box">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Product Name"
+                >
+
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="Price"
+                >
+
+                <input
+                    type="number"
+                    id="stock"
+                    placeholder="Stock Quantity"
+                >
+
+                <input
+                    type="text"
+                    id="imageUrl"
+                    placeholder="Image URL"
+                >
+
+            </div>
+
+            <div class="button-box">
+
+                <button onclick="addProduct()">
+                    Add Product
+                </button>
+
+                <button
+                    onclick="clearFields()"
+                    class="clear-btn"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PRODUCTS SECTION -->
+
+        <div id="productsSection">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search Product"
+                    onkeyup="searchProduct()"
+                >
+
+            </div>
+
+            <div class="notification-box">
+
+                <h2>Stock Notifications</h2>
+
+                <pre id="notificationBox">
+    No Notifications
+                </pre>
+
+            </div>
+
+            <h2>Products</h2>
+
+            <div id="productList"></div>
+
+        </div>
+
+        <!-- ORDERS SECTION -->
+
+        <div id="ordersSection" style="display:none;">
+
+            <h2>Customer Orders</h2>
+
+            <div class="dashboard">
+            </div>
+
+            <div id="orderList"></div>
+
+        </div>
+
+    </div>
+
+        <div id="orderList"></div>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

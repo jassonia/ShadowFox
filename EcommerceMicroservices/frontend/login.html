@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-Commerce Login</title>
+
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <h1>E-Commerce</h1>
+
+            <p class="subtitle">
+                Smart Shopping Management System
+            </p>
+
+            <div class="role-box">
+
+                <label>
+                    <input
+                    type="radio"
+                    name="role"
+                    value="admin"
+                    onclick="toggleRegister()"
+                    >
+                    Admin
+                </label>
+
+                <label>
+                    <input
+                    type="radio"
+                    name="role"
+                    value="customer"
+                    checked
+                    onclick="toggleRegister()"
+                    >
+                    Customer
+                </label>
+
+            </div>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter Username"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+            >
+
+            <button onclick="login()">
+                Login
+            </button>
+
+            <div id="registerLink">
+
+    <p>
+        New user?
+        <a href="register.html">
+            Create Account
+        </a>
+    </p>
+
+</div>
+
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

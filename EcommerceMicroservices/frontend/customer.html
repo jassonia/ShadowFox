@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Customer Store</title>
+
+    <link rel="stylesheet" href="customer.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+    
+        <div class="nav">
+
+    <a href="customer.html">
+        Home
+    </a>
+
+    <a href="about.html">
+        About
+    </a>
+
+    <a href="contact.html">
+        Contact
+    </a>
+
+</div>
+
+    <h2 id="welcomeUser"></h2>
+
+    <button
+        onclick="logout()"
+        class="logout-btn"
+    >
+        Logout
+    </button>
+
+    </div>
+    
+    <div class="hero">
+
+        <h1>Customer Store</h1>
+
+        <p>
+            Browse Products • Place Orders
+        </p>
+
+    </div>
+
+    <div class="container">
+
+        <!-- DASHBOARD -->
+
+        <div class="dashboard">
+
+            <div class="card">
+
+                <h3>Total Orders</h3>
+
+                <p id="totalOrders">0</p>
+
+            </div>
+
+        </div>
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search Product"
+                onkeyup="searchProduct()"
+            >
+
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <h2>Available Products</h2>
+
+        <div id="productList"></div>
+
+        <!-- ORDER SECTION -->
+
+        <h2>Place Order</h2>
+
+        <div class="form-box">
+
+            <input
+                type="text"
+                id="orderProduct"
+                placeholder="Product Name"
+                readonly
+            >
+
+            <input
+                type="number"
+                id="orderQuantity"
+                placeholder="Quantity"
+            >
+
+            <input
+                type="number"
+                id="orderPrice"
+                placeholder="Total Price"
+                readonly
+            >
+
+        </div>
+
+        <div class="button-box">
+
+            <button onclick="placeOrder()">
+                Place Order
+            </button>
+
+        </div>
+
+        <!-- ORDERS -->
+
+        <h2>My Orders</h2>
+
+        <div id="orderList"></div>
+
+    </div>
+
+    <script src="customer.js"></script>
+
+</body>
+
+</html>

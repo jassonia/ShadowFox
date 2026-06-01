@@ -1,0 +1,422 @@
+/* BODY */
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f6f9;
+}
+
+/* HERO SECTION */
+
+.hero {
+
+    background: linear-gradient(
+        135deg,
+        #007bff,
+        #00c6ff
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero h1 {
+
+    margin: 0;
+
+    font-size: 42px;
+}
+
+.hero p {
+
+    margin-top: 10px;
+
+    font-size: 18px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* DASHBOARD */
+
+.dashboard {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.card {
+
+    flex: 1;
+
+    background: linear-gradient(
+        135deg,
+        #4facfe,
+        #00f2fe
+    );
+
+    color: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+
+    margin-bottom: 10px;
+}
+
+.card p {
+
+    font-size: 35px;
+
+    font-weight: bold;
+}
+
+/* HEADINGS */
+
+h2 {
+
+    margin-top: 35px;
+
+    margin-bottom: 20px;
+
+    color: #222;
+
+    border-left: 5px solid #007bff;
+
+    padding-left: 10px;
+}
+
+/* FORM */
+
+.form-box {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+input {
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus {
+
+    border-color: #007bff;
+}
+
+/* BUTTONS */
+
+.button-box {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+button {
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    transform: scale(1.03);
+
+    opacity: 0.9;
+}
+
+/* MAIN BUTTON */
+
+.button-box button:first-child {
+
+    background: #007bff;
+}
+
+/* CLEAR BUTTON */
+
+.clear-btn {
+
+    background: #dc3545;
+}
+
+/* SEARCH */
+
+.search-box {
+
+    margin-bottom: 25px;
+}
+
+.search-box input {
+
+    width: 100%;
+}
+
+/* PRODUCT CARD */
+
+.product {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #fafafa;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.product:hover {
+
+    transform: translateY(-3px);
+}
+
+/* LOW STOCK */
+
+.low-stock {
+
+    border: 3px solid red;
+
+    background: #ffe5e5;
+}
+
+/* PRODUCT INFO */
+
+.product-info {
+
+    flex: 1;
+}
+
+.product-info h3 {
+
+    margin-bottom: 10px;
+
+    color: #222;
+}
+
+.product-info p {
+
+    margin: 8px 0;
+
+    font-size: 16px;
+}
+
+/* IMAGE */
+
+.product img {
+
+    width: 240px;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-left: 20px;
+
+    border: 2px solid #ddd;
+}
+
+/* BUTTON COLORS */
+
+.edit-btn {
+
+    background: #28a745;
+
+    margin-right: 10px;
+}
+
+.delete-btn {
+
+    background: #dc3545;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    .product {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .product img {
+
+        width: 100%;
+
+        height: auto;
+
+        margin-left: 0;
+
+        margin-top: 20px;
+    }
+
+    .dashboard {
+
+        flex-direction: column;
+    }
+
+    .button-box {
+
+        flex-direction: column;
+    }
+}
+.notification-box {
+
+    background: #fff3cd;
+
+    color: #856404;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    border: 2px solid #ffeeba;
+
+    font-weight: bold;
+}
+
+.notification-box h2 {
+
+    margin-bottom: 10px;
+}
+.logout-btn{
+
+    margin-left:auto;
+
+    background:red;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+}
+
+.logout-btn:hover{
+
+    background:darkred;
+}
+.navbar{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px;
+
+    background:#222;
+
+    position:relative;
+}
+
+.navbar button{
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:#444;
+}
+
+.navbar button:hover{
+
+    background:#666;
+}
+.cancelled-btn{
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: not-allowed;
+}

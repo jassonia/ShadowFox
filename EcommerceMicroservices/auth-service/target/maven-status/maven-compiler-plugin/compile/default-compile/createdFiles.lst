@@ -1,0 +1,5 @@
+com\ecommerce\auth\controller\AuthController.class
+com\ecommerce\auth\model\User.class
+com\ecommerce\auth\service\AuthService.class
+com\ecommerce\auth\AuthServiceApplication.class
+com\ecommerce\auth\util\JwtUtil.class
